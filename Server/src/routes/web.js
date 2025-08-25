@@ -8,8 +8,7 @@ const router = express.Router();
 const initWebRoutes = (app) => {
 
     // USER
-    router.get("/hello", userController.handleHelloWorld);
-    router.get("/users", userController.handleUserPage);
+    router.get("/users/get-all-users", userController.getAllUsers);
     router.post("/users/create-user", userController.handleCreateNewUser)
     app.use("/api", router);
 };
